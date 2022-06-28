@@ -3,5 +3,5 @@
 for i in range(99):
  if i < 10:
     print("0{}".format(i), end = " ")
- else
+ else:
     print("{},".format(i), end = " ")
