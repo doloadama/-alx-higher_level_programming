@@ -2,4 +2,4 @@
 
 def add(a, b):
     somme = a + b
-    print("{:d}".format(somme))
+    return (somme)
