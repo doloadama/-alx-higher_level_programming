@@ -67,3 +67,4 @@ rev = rev->next;
 }
 reverse_listint(&mid);
 return (1);
+}
