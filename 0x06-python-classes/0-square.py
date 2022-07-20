@@ -1,7 +1,6 @@
 #!/usr/bin/python3
 
-"""Python class"""
 
-class Square(self):
+class Square():
     """Empty class """
     pass
