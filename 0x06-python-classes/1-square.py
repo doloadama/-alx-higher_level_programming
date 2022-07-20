@@ -5,10 +5,8 @@
 class Square:
     """ Representation of a square """
     def __init__(self, size):
-        """ The __init___ method initializes the size value of the square 
-        Args:
-             size (int): the size of a square
-        Returns:
-             size: size of a square
+        """The __init__ method initializes the size value of the square. 
+        Attributes:
+          size (int): the size of the square.
         """
         self._Square__size = size
