@@ -1,9 +1,15 @@
 #!/usr/bin/python3
 
-#0-square.py
+"""
+0-square.py
+"""
 
-""" Define a new class """
+""" 
+Define a new class 
+"""
 
 class square(self):
-    """ A simple class """
+    """ 
+    A simple class 
+    """
     pass
