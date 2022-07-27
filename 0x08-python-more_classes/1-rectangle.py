@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-#1-rectangle.py
+# 1-rectangle.py
 
 """
 A module with a Rectangle that does nothing
