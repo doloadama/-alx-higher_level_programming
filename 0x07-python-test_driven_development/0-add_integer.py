@@ -1,4 +1,4 @@
-#s#!/usr/bin/python3
+#!/usr/bin/python3
 """Module containing simple function to add together two integers
 Must import this module to use it. Cannot be executed directly.
 To run doctests:
