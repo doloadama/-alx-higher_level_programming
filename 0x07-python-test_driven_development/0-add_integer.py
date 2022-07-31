@@ -1,6 +1,5 @@
 #!/usr/bin/python3
 # 0-add_integer.py
-# Oscar Bedat <3961@holbertonschool.com>
 """" A module to add two numbers
 This module performs the addition operation between two numbers,
 these numbers can be integers or floats.
