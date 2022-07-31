@@ -1,12 +1,26 @@
 #!/usr/bin/python3
 """
 This is the "2-matrix_divided" module.
-The 2-matrix_divided module supplies one function, matrix_divided(matrix, div).
+The 2-matrix_divided module supplies one function
+matrix_divided(matrix, div).
 """
 
 
 def matrix_divided(matrix, div):
-    """Divides all elements in the matrix by div"""
+     """Function to divide all elements of `matrix` by `div`
+    Args:
+        matrix: 2d array (list of lists) of integers/floats.
+        div: Divisor of `matrix`. Must be either integer or float.
+    Returns:
+        New matrix with result of the division of each element of
+        `matrix` by `div`.
+    Raises:
+        TypeError: If `matrix` not 2d or contains non-int/float
+            elements or `div` is neither an integer nor float.
+            Also if `matrix` is ragged (not all rows of equal length).
+        ZeroDivisionError: If `div` is 0.
+        OverflowError: If `matrix` contains '+/-inf' or 'nan'.
+    """
     if type(matrix) is not list:
         raise TypeError(
             "matrix must be a matrix (list of lists) of integers/floats")
