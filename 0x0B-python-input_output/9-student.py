@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""9-student.py"""
+"""9-student Module"""
 
 
 class Student:
@@ -16,6 +16,6 @@ class Student:
         self.last_name = last_name
         self.age = age
 
-    def to_json(self)
-    """Returns a dictionary of a student instance"""
-    return self.__dict__
+    def to_json(self):
+        """Returns a dictionary of a student instance"""
+        return self.__dict__
