@@ -6,14 +6,14 @@
 class Student:
     """Defines a student"""
     def __init__(self, first_name, last_name, age):
-         """Initializes the first_name, last_name, age attributes"""
+        """Initializes the first_name, last_name, age attributes"""
         self.first_name = first_name
         self.last_name = last_name
         self.age = age
         
     def to_json(self, attrs=None):
         """Retrieves a dictionary of a Student instances"""
-        if attr is None:
+        if attrs is None:
             return self.__dict__
         new_dict = {}
 
