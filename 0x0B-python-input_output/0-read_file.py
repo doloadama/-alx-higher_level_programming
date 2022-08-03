@@ -10,7 +10,10 @@ You are not allowed to import any module
 
 def read_file(filename=""):
     """
-    reads a text file and prints it to stdout
+    Reads a text file and prints it to stdout
+    Args:
+         filename: text file to read
+    Returns: None
     """
     with open(filename, 'r', encoding="utf-8") as f:
         for ligne in f:
