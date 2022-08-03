@@ -5,8 +5,8 @@
 def write_file(filename="", text=""):
     """Writes a string to a text file in UTF-8
     Args:
-           filename: a text file
-           text (str): The text to write to the file
+        filename: a text file
+        text: The text to write to the file
     Return: the number of characters written
     """
     with open(filename, 'w', encoding="UTF-8") as f:
