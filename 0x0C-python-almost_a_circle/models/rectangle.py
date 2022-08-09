@@ -101,3 +101,22 @@ class Rectangle(Base):
                                                        self.__y,
                                                        self.__width,
                                                        self.__height)
+
+    def update(self):
+        """print in stdout the Rectangle instance with the 
+        character # by taking care of x and y"""
+
+        if(args):
+            for i, j in enumerate(args):
+                if i == 0:
+                    self.id = j
+                elif i == 1:
+                    self.width = j
+                elif i == 2:
+                    self.height = j
+                elif i == 3:
+                    self.x = j
+                elif i == 4:
+                    self.y = j
+        for key, value in kwargs.items():
+            setattr(self, key, value)
