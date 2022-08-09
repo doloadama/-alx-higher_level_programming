@@ -6,7 +6,7 @@ Class taht inherits from Base
 from models.base import Base
 
 
-class Rectangle:
+class Rectangle(Base):
     """Rectangle implementation
     """
 
