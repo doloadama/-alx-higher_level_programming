@@ -1,21 +1,19 @@
 #!/usr/bin/python3
-"""
-This module implements `base` class of all other classes in this project.
-The goal of it is to manage id attribute in all your future classes
-and to avoid duplicating the same code (by extension, same bugs)
-"""
+# base.py
 
-class Base:
-    """
-    implementation
-    """
+"""Define Base class"""
+from os import path
+import json
 
+
+class Base(object):
+    """Base: Class define base"""
     __nb_objects = 0
 
     def __init__(self, id=None):
-        """initialization
+        """__init__ initialized constructor
         Args:
-            id (int, optional): object id. Defaults to None.
+            id (int): Defaults 2 None.
         """
         if id is not None:
             self.id = id
