@@ -4,7 +4,7 @@
 
 from models.rectangle import Rectangle
 
-class square(rectangle):
+class Square(Rectangle):
     """A class that inherits the rectangle class"""
 
     def __init__(self, size, x=0, y=0, id=None):
