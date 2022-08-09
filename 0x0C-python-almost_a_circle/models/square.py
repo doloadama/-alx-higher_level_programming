@@ -7,9 +7,9 @@ from models.rectangle import Rectangle
 class Square(Rectangle):
     """A class that inherits the rectangle class"""
 
-    def __init__(self, size, x=0, y=0, id=None):
+    def __init__(self, size: int, x=0, y=0, id=None):
         """Class constructor"""
-        super().__init__(id, x, y , size, size)
+        super().__init__(size, size, x, y, id)
         self.size = size
 
     def __str__(self):
@@ -19,7 +19,7 @@ class Square(Rectangle):
     @property
     def size(self):
         """retrieve size"""
-        return self.width
+        return self.size
 
     @size.setter
     def size(self, value):
