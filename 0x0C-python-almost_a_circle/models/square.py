@@ -1,29 +1,30 @@
 #!/usr/bin/python3
-
-"""square.py"""
-
+""" Square """
 from models.rectangle import Rectangle
 
-class Square(Rectangle):
-    """A class that inherits the rectangle class"""
 
-    def __init__(self, size: int, x=0, y=0, id=None):
-        """Class constructor"""
+class Square(Rectangle):
+    """class square extends from rectangle"""
+
+    def __init__(self, size, x=0, y=0, id=None):
+        """class constructor for square"""
         super().__init__(size, size, x, y, id)
         self.size = size
 
     def __str__(self):
-        return '[Square] ({}) {}/{} - {}'.format(self.id, self.x, self.y,
-                                               self.size)
+        """str representation of square"""
+        return '[Square] ({}) {}/{} - {}'.format(self.id,
+                                                 self.x,
+                                                 self.y,
+                                                 self.size)
 
     @property
     def size(self):
         """retrieve size"""
-        return self.size
+        return self.width
 
     @size.setter
     def size(self, value):
         """set width and height with the same value, value"""
         self.width = value
         self.height = value
-        
