@@ -1,23 +1,32 @@
 #!/usr/bin/node
-module.exports = class Rectangle {
+class Rectangle {
   constructor (w, h) {
-    if (w <= 0 || h <= 0 || isNaN(w) || isNaN(h)) return;
-    this.width = w;
-    this.height = h;
+    if ((w > 0) && (h > 0)) {
+      this.width = w;
+      this.height = h;
+    }
   }
 
-  print (char = 'X') {
+  print () {
     for (let i = 0; i < this.height; i++) {
-      console.log(char.repeat(this.width));
+      let s = '';
+      for (let j = 0; j < this.width; j++) {
+        s += 'X';
+      }
+      console.log(s);
     }
   }
 
   rotate () {
-    [this.height, this.width] = [this.width, this.height];
+    const wid = this.width;
+    this.width = this.height;
+    this.height = wid;
   }
 
   double () {
-    this.height = this.height * 2;
-    this.width = this.width * 2;
+    this.width *= 2;
+    this.height *= 2;
   }
-};
+}
+
+module.exports = Rectangle;
