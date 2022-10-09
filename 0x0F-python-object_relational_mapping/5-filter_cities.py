@@ -1,23 +1,43 @@
 #!/usr/bin/python3
-
-"""takes in the name of a state as an argument and lists all cities of that state, using the database hbtn_0e_4_usa"""
+"""Lists all cities from the database hbtn_0e_4_usa"""
 
 import MySQLdb
-import sys
+from sys import argv
 
-if __name__ = '__main__':
-    db = MySQLdb.connect(host='localhost', user=sys.argv[1], port=3306,
-                         password=sys.argv[2], db=sys.argv[3])
-    cur = db.cursor()
-    cmd = """SELECT cities.name
-          FROM states
-          INNER JOIN cities ON states.id = cities.state_id
-          WHERE states.name=%s
-          ORDER BY cities.id ASC"""
-    cur.execute(cmd, (sys.argv[4],))
-    allcities = cur.fetchall()
-    print(", ".join[city[0] for city in allcities]))
+if __name__ == '__main__':
+    """
+    Access to the database and get the cities
+    from the database.
+    """
 
+    db = MySQLdb.connect(host="localhost", user=argv[1], port=3306,
+                         passwd=argv[2], db=argv[3])
+
+    # Query
+    with db.cursor() as cur:
+        cur.execute("""
+            SELECT
+                cities.id, cities.name
+            FROM
+                cities
+            JOIN
+                states
+            ON
+                cities.state_id = states.id
+            WHERE
+                states.name LIKE BINARY %(state_name)s
+            ORDER BY
+                cities.id ASC
+        """, {
+            'state_name': argv[4]
+        })
+
+        rows = cur.fetchall()
+
+    # Print query
+    if rows is not None:
+        print(", ".join([row[1] for row in rows]))
+
+    # Close cursor
     cur.close()
     db.close()
-    
