@@ -18,12 +18,13 @@ if __name__ == '__main__':
     # Start cursor
     cur = db.cursor()
 
-    #QUERY
-    cur.execute("SELECT *FROM states Where name LIKE BINARY '{}'\
+    #Query
+    cur.execute("SELECT *FROM states \
+                 Where name LIKE BINARY '{}' \
                  ORDER BY states.id ASC".format(argv[4]))
     rows = cur.fetchall()
 
-    #PRINT QUERY
+    #Print query
 
     for row in rows:
         print(row)
