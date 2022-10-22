@@ -1,22 +1,28 @@
 #!/usr/bin/python3
 """
-    Write a function that finds a peak in a list of unsorted integers.
+   this function finds a peak in a list of unsorted integers
 """
 
 
-def find_peak(inArray):
-    """
-    function that finds a peak in a list of unsorted integers.
-    """
-    if not inArray:
+def find_peak(numbr):
+    '''
+        Finds the peak in a list of numbers
+    '''
+    length = len(numbr)
+    if length == 0:
         return None
-    newArray = []
-    lenArray = len(inArray)
+    if length == 1:
+        return (numbr[0])
+    if length == 2:
+        return numbr[0] if numbr[0] >= numbr[1] else numbr[1]
 
-    for i in range(1, lenArray-1):
-        newArray.append(inArray[i])
-    searchPeak = newArray[0]
-    for j in range(len(newArray)):
-        if newArray[j] >= searchPeak:
-            searchPeak = newArray[j]
-    return searchPeak
+    for idx in range(0, length):
+        value = numbr[idx]
+        if (idx > 0 and idx < length - 1 and
+                numbr[idx + 1] <= value and numbr[idx - 1] <= value):
+                return value
+        elif idx == 0 and numbr[idx + 1] <= value:
+            return value
+        elif idx == length - 1 and numbr[idx - 1] <= value:
+            return value
+    return pick
